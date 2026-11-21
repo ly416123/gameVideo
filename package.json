@@ -1,0 +1,23 @@
+{
+  "name": "xiaoma-guohe-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "game": "node game/server.mjs",
+    "start": "remotion studio src/index.ts",
+    "render:proxy": "remotion render src/index.ts XiaomaGuohe out/xiaoma-guohe-proxy.mp4 --width=1280 --height=720 --codec=h264 --crf=26 --audio-codec=aac",
+    "render:full": "remotion render src/index.ts XiaomaGuohe out/xiaoma-guohe-1080p.mp4 --codec=h264 --crf=18"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.545",
+    "@remotion/media-utils": "4.0.545",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "remotion": "4.0.545"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "typescript": "5.9.3"
+  }
+}
