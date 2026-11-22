@@ -7,3 +7,21 @@ dist/
 .env
 .env.*
 !.env.example
+
+# 成品素材体积过大（3GB+），仅保留文档入库
+content/**
+!content/**/
+!content/**/*.md
+
+# FC 音乐包大文件（zip/wav 共 ~190MB），不入库，本地保留
+public/assets/free/fc/audio/
+
+# 只保留约束文档与庄子故事素材，其余大素材不入库（本地保留）
+public/assets/free/
+public/assets/cg-audio/
+public/assets/episodes/three-little-pigs/
+public/assets/episodes/xiaoma-guohe/
+public/assets/episodes/zhuangzi-muyanzhijian-demo/**/*.png
+public/assets/*.png
+public/lottery-audio/
+!public/assets/free/SOURCES.md

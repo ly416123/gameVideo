@@ -8,13 +8,16 @@
 </head>
 <body>
   <main>
-    <header><span>小马过河 <b>河岸突围</b></span><div class="header-actions"><span>第一关 · 魔王城下的旧街</span><button id="audio-toggle" type="button" aria-controls="audio-settings" aria-expanded="false">♫ 声音设置</button></div></header>
+    <header><span>小马过河 <b>河岸突围</b></span><div class="header-actions"><span id="level-title">第一关 · 魔王城下的旧街</span><button id="audio-toggle" type="button" aria-controls="audio-settings" aria-expanded="false">♫ 声音设置</button></div></header>
     <section id="audio-settings" class="audio-settings" aria-label="声音设置" hidden>
       <div class="audio-settings-title"><strong>声音设置</strong><button id="audio-close" type="button" aria-label="关闭声音设置">×</button></div>
       <label for="music-volume">背景音乐 <output id="music-value">70%</output></label>
       <input id="music-volume" type="range" min="0" max="100" step="1" value="70">
       <label for="effects-volume">音效与角色叫声 <output id="effects-value">80%</output></label>
       <input id="effects-volume" type="range" min="0" max="100" step="1" value="80">
+      <label for="voice-volume">序章旁白 <output id="voice-value">90%</output></label>
+      <input id="voice-volume" type="range" min="0" max="100" step="1" value="90">
+      <label class="attack-voice-setting" for="attack-voice-enabled"><span>攻击时小马叫声</span><input id="attack-voice-enabled" type="checkbox" checked></label>
     </section>
     <div id="frame"><canvas id="game" width="960" height="540" aria-label="小马过河游戏画面"></canvas><div id="overlay"></div></div>
     <footer><span>移动 WASD / 方向键　攻击 J　跳跃 K　冲刺 L　抓投 U　拾取 I　暂停 Esc</span><span id="status">点击开始</span></footer>

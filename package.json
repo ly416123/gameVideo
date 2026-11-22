@@ -4,7 +4,12 @@
   "private": true,
   "scripts": {
     "game": "node game/server.mjs",
+    "story:prepare": "node scripts/create-story.mjs --prepare",
+    "story:create": "node scripts/create-story.mjs --create",
     "start": "remotion studio src/index.ts",
+    "render:lottery": "remotion render src/index.ts StoryLottery out/story-lottery.mp4 --frames=75-369 --codec=h264 --crf=18 --audio-codec=aac",
+    "render:episode": "remotion render src/index.ts XiaomaEpisode out/xiaoma-guohe-episode-v1.mp4 --codec=h264 --crf=20 --audio-codec=aac",
+    "render:episode:v2": "remotion render src/index.ts XiaomaEpisode out/xiaoma-guohe-episode-v2.mp4 --codec=h264 --crf=20 --audio-codec=aac",
     "render:proxy": "remotion render src/index.ts XiaomaGuohe out/xiaoma-guohe-proxy.mp4 --width=1280 --height=720 --codec=h264 --crf=26 --audio-codec=aac",
     "render:full": "remotion render src/index.ts XiaomaGuohe out/xiaoma-guohe-1080p.mp4 --codec=h264 --crf=18"
   },
@@ -18,6 +23,7 @@
   "devDependencies": {
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
+    "playwright": "^1.65.1",
     "typescript": "5.9.3"
   }
 }
